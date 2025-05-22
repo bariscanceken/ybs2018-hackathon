@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Etkinlik Yönetimi</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #f0f0f0;
+}
+QLabel {
+    color: #333333;
+}
+QLineEdit, QTextEdit, QDateTimeEdit {
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: white;
+}
+QPushButton {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #2196F3;
+    color: white;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #1976D2;
+}
+QPushButton#etkinlik_sil {
+    background-color: #f44336;
+}
+QPushButton#etkinlik_sil:hover {
+    background-color: #d32f2f;
+}
+QTableWidget {
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: white;
+    gridline-color: #e0e0e0;
+}
+QTableWidget::item {
+    padding: 8px;
+}
+QTableWidget::item:selected {
+    background-color: #bbdefb;
+    color: #000000;
+}
+QHeaderView::section {
+    background-color: #e0e0e0;
+    padding: 8px;
+    border: none;
+    font-weight: bold;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QWidget" name="form_widget" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>300</width>
+        <height>0</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="baslik">
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Etkinlik Ekle</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_etkinlik_adi">
+         <property name="text">
+          <string>Etkinlik Adı:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="etkinlik_adi">
+         <property name="placeholderText">
+          <string>Etkinlik adını giriniz</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_etkinlik_yeri">
+         <property name="text">
+          <string>Yer:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="etkinlik_yeri">
+         <property name="placeholderText">
+          <string>Etkinlik yerini giriniz</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_etkinlik_tarihi">
+         <property name="text">
+          <string>Tarih ve Saat:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateTimeEdit" name="etkinlik_tarihi">
+         <property name="calendarPopup">
+          <bool>true</bool>
+         </property>
+         <property name="displayFormat">
+          <string>dd.MM.yyyy HH:mm</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_etkinlik_aciklama">
+         <property name="text">
+          <string>Açıklama:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="etkinlik_aciklama">
+         <property name="placeholderText">
+          <string>Etkinlik açıklamasını giriniz</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="etkinlik_ekle">
+         <property name="text">
+          <string>Etkinlik Ekle</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="etkinlik_duzenle">
+         <property name="text">
+          <string>Etkinlik Düzenle</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="etkinlik_sil">
+         <property name="text">
+          <string>Etkinlik Sil</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="etkinlik_listesi">
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <column>
+       <property name="text">
+        <string>Etkinlik Adı</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Yer</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Tarih</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Katılım</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>İşlemler</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
