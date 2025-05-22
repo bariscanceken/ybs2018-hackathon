@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginUI</class>
+ <widget class="QWidget" name="LoginUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Destek Sistemi Giriş</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>20</number>
+   </property>
+   <property name="leftMargin">
+    <number>20</number>
+   </property>
+   <property name="topMargin">
+    <number>20</number>
+   </property>
+   <property name="rightMargin">
+    <number>20</number>
+   </property>
+   <property name="bottomMargin">
+    <number>20</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="title_label">
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>24</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #4CAF50;</string>
+     </property>
+     <property name="text">
+      <string>Destek Sistemi Giriş</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="username_input">
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>Kullanıcı Adı</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="password_input">
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>Şifre</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="login_button">
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+QPushButton:hover {
+    background-color: #45a049;
+}</string>
+     </property>
+     <property name="text">
+      <string>Giriş Yap</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="register_staff_button">
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #FFC107;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+QPushButton:hover {
+    background-color: #e6ac00;
+}</string>
+     </property>
+     <property name="text">
+      <string>Personel Kayıt</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="register_customer_button">
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #FFC107;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+QPushButton:hover {
+    background-color: #e6ac00;
+}</string>
+     </property>
+     <property name="text">
+      <string>Müşteri Kayıt</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui> 
