@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>832</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Proje Takip ve Raporlama Sistemi</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #a29bfe;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget {
+    background-color: #a29bfe;
+}</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label_baslik">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: white;</string>
+      </property>
+      <property name="text">
+       <string>PROJE TAKİP VE RAPORLAMA SİSTEMİ</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QFrame" name="frame">
+        <property name="minimumSize">
+         <size>
+          <width>250</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>300</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+    background-color: #6c5ce7;
+    border-radius: 10px;
+    padding: 10px;
+}</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QScrollArea" name="scrollArea">
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QScrollArea { border: none; }</string>
+           </property>
+           <widget class="QWidget" name="scrollContent">
+            <layout class="QVBoxLayout" name="scrollLayout">
+             <item>
+              <widget class="QLabel" name="label_projeler">
+               <property name="styleSheet">
+                <string notr="true">color: white; font-weight: bold; font-size: 12px;</string>
+               </property>
+               <property name="text">
+                <string>PROJELER</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="combobox_proje">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox {
+    border: 1px solid #a29bfe;
+    border-radius: 5px;
+    padding: 5px;
+    background: white;
+}
+QComboBox:hover {
+    border: 1px solid #ffffff;
+}</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_raporlar">
+               <property name="styleSheet">
+                <string notr="true">color: white; font-weight: bold; font-size: 12px;</string>
+               </property>
+               <property name="text">
+                <string>RAPORLAR</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="combobox_raporlar">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox {
+    border: 1px solid #a29bfe;
+    border-radius: 5px;
+    padding: 5px;
+    background: white;
+}
+QComboBox:hover {
+    border: 1px solid #ffffff;
+}</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_riskler">
+               <property name="styleSheet">
+                <string notr="true">color: white; font-weight: bold; font-size: 12px;</string>
+               </property>
+               <property name="text">
+                <string>RİSKLER</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="combobox_riskler">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox {
+    border: 1px solid #a29bfe;
+    border-radius: 5px;
+    padding: 5px;
+    background: white;
+}
+QComboBox:hover {
+    border: 1px solid #ffffff;
+}</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QScrollArea" name="buttonScrollArea">
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QScrollArea { border: none; }</string>
+           </property>
+           <widget class="QWidget" name="buttonContent">
+            <layout class="QVBoxLayout" name="buttonLayout">
+             <item>
+              <widget class="QPushButton" name="button_goster">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background-color: #a29bfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #ffffff;
+    color: #6c5ce7;
+}</string>
+               </property>
+               <property name="text">
+                <string>Göster</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_2">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background-color: #a29bfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #ffffff;
+    color: #6c5ce7;
+}</string>
+               </property>
+               <property name="text">
+                <string>Rapor</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background-color: #a29bfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #ffffff;
+    color: #6c5ce7;
+}</string>
+               </property>
+               <property name="text">
+                <string>Grafik Göster</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_3">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background-color: #a29bfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #ffffff;
+    color: #6c5ce7;
+}</string>
+               </property>
+               <property name="text">
+                <string>Riskler</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_4">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background-color: #a29bfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #ffffff;
+    color: #6c5ce7;
+}</string>
+               </property>
+               <property name="text">
+                <string>İndir</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="button_kullanici_ekle">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background-color: #a29bfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #ffffff;
+    color: #6c5ce7;
+}</string>
+               </property>
+               <property name="text">
+                <string>Kullanıcı Ekle</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="button_gorev_ekle">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background-color: #a29bfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #ffffff;
+    color: #6c5ce7;
+}</string>
+               </property>
+               <property name="text">
+                <string>Görev Ekle</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="button_risk_ekle">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background-color: #a29bfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #ffffff;
+    color: #6c5ce7;
+}</string>
+               </property>
+               <property name="text">
+                <string>Risk Ekle</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="button_proje_ekle">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background-color: #a29bfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #ffffff;
+    color: #6c5ce7;
+}</string>
+               </property>
+               <property name="text">
+                <string>Proje Ekle</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="button_show_projeler">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background-color: #a29bfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #ffffff;
+    color: #6c5ce7;
+}</string>
+               </property>
+               <property name="text">
+                <string>Projeler Tablosu</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="button_show_gorevler">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background-color: #a29bfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #ffffff;
+    color: #6c5ce7;
+}</string>
+               </property>
+               <property name="text">
+                <string>Görevler Tablosu</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="button_show_raporlar">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background-color: #a29bfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #ffffff;
+    color: #6c5ce7;
+}</string>
+               </property>
+               <property name="text">
+                <string>Raporlar Tablosu</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="button_show_kullanicilar">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background-color: #a29bfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #ffffff;
+    color: #6c5ce7;
+}</string>
+               </property>
+               <property name="text">
+                <string>Kullanıcılar Tablosu</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QComboBox" name="combobox_grafik_turu">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QComboBox {
+    background-color: white;
+    border: 1px solid #a29bfe;
+    border-radius: 5px;
+    padding: 5px;
+}
+QComboBox:hover {
+    border: 1px solid #6c5ce7;
+}</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tablo">
+          <property name="styleSheet">
+           <string notr="true">QTableWidget {
+    border: 1px solid #a29bfe;
+    border-radius: 10px;
+    background: white;
+}
+QTableWidget::item {
+    padding: 5px;
+}
+QHeaderView::section {
+    background-color: #6c5ce7;
+    color: white;
+    padding: 5px;
+    border: 1px solid #a29bfe;
+}</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGraphicsView" name="grafik">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>300</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QGraphicsView {
+    border: 1px solid #a29bfe;
+    border-radius: 10px;
+    background: white;
+}</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
